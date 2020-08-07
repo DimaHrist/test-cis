@@ -1,0 +1,22 @@
+<mat-card class="user-card" *ngFor="let user of users">
+  <mat-card-header>
+    <mat-card-title>{{user.first_name}}</mat-card-title>
+    <mat-card-subtitle>{{user.last_name}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{user.avatar}}">
+  <mat-card-content>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-button
+      routerLink="{{user.id}}">
+      VIEW
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-paginator [length]="pagination.count"
+               [pageSize]="6"
+              [pageIndex]="pagination.pageIndex - 1"
+               (page)="onPageChange($event)">
+</mat-paginator>

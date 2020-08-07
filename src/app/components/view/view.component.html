@@ -1,0 +1,23 @@
+
+<div class="wrapper">
+  <mat-card class="user-card">
+    <mat-card-header>
+      <mat-card-title>{{user?.data.first_name}}</mat-card-title>
+      <mat-card-subtitle>{{user?.data.last_name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{user?.data.avatar}}">
+    <mat-card-content>
+      <p> {{user?.ad.company}} </p>
+      <p> {{user?.ad.text}} </p>
+      <p> <a href="{{user?.ad.url}}" target="_blank">{{user?.ad.url}}</a> </p>
+    </mat-card-content>
+  </mat-card>
+
+  <button
+    mat-button
+    routerLink="">
+    HOME
+  </button>
+</div>
+
+
