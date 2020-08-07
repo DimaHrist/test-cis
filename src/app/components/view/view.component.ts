@@ -24,7 +24,6 @@ export class ViewComponent implements OnInit {
     this.apiService.getUser(id)
       .subscribe((data) => {
         this.user = data;
-        console.log(data)
       })
   }
 
